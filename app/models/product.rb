@@ -8,4 +8,17 @@ class Product < ActiveRecord::Base
    :with => %r{\.(gif|jpg|png)$}i,
    :message => 'must be a URL for GIF, JPG or PNG image.'
   }
+
+  has_many :line_items
+
+  before_destroy :ensure_no_line_items_present
+
+  def ensure_no_line_items_present 
+  	if line_items.count.zero?
+  		return true
+  	else
+  		error[:base] << "line items associated with this product are still not deleted"
+  		return false
+  	end
+  end
 end
