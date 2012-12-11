@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/intridea/omniauth.git
+  revision: e34cf672cd02d5ff44c7b3c8eaf9b6ea78f3237a
+  specs:
+    omniauth (1.1.1)
+      hashie (~> 1.2)
+      rack
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,6 +48,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -107,6 +116,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   json
+  omniauth!
   rails (= 3.2.9)
   sass-rails (~> 3.2.3)
   sqlite3
